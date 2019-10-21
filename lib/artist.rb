@@ -38,13 +38,9 @@ class Artist
   end
 
   def self.create(name)
-    # Artist.new
-    ## SOLUTION 1
-    # self.new(name).tap{|artist| artist.save } 
-
-    ## SOLUTION 2
+  
     new_artist = self.new(name)
-    # new_artist.save
+   
     new_artist
   end
 
