@@ -7,11 +7,11 @@ class Artist
   def initialize(name)
     @name = name
     save
-    # @songs = []
+  
   end
 
   def add_song(song)
-    # @songs << song
+    
     song.artist = self
   end
 
@@ -28,21 +28,9 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    ## SOLUTION 1
+   
     self.find(name) ? self.find(name) : self.create(name)
-    ## SOLUTION 2
-    # find = self.all.find {|artist| name == artist.name }
-    # if find
-    #   find
-    # else 
-    #   self.new(name).tap{|artist| artist.save }
-    # end
-
-    ## SOLUTION 3
-    # self.find(name) || self.create(name)
-
-    ## SOLUTION 4
-    # self.all.find {|artist| name == artist.name } || self.new(name).tap{|artist| artist.save }
+   
   end
 
   def self.find(name)
